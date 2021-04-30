@@ -3,7 +3,6 @@ const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 
 async function reviewIdValidation(req, res, next) {
   const { reviewId } = req.params;
-  console.log(reviewId)
   const review = await service.read(reviewId);
 
   if (review.length) {
